@@ -50,4 +50,7 @@ try? modifyTextString.write(to: appSupportFile, atomically: true, encoding: .utf
 try? modifyTextString.write(to: documentsFile, atomically: true, encoding: .utf8)
 try? modifyTextString.write(to: tmpFile, atomically: true, encoding: .utf8)
 
-
+// delete all file
+try? fileManager.removeItem(at: appSupportDirectoryURL)
+try? fileManager.removeItem(at: documentsDirectoryURL)
+try? fileManager.removeItem(at: tempDirectoryURL)
