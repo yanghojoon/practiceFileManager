@@ -20,3 +20,9 @@ let tempDirectoryURL = tempURL.appendingPathComponent("FileIOExample")
 try? fileManager.createDirectory(at: appSupportDirectoryURL, withIntermediateDirectories: true, attributes: nil)
 try? fileManager.createDirectory(at: documentsDirectoryURL, withIntermediateDirectories: true, attributes: nil)
 try? fileManager.createDirectory(at: tempDirectoryURL, withIntermediateDirectories: true, attributes: nil)
+
+// create file
+let appSupportFile = appSupportDirectoryURL.appendingPathComponent("abc.txt")
+let documentsFile = documentsDirectoryURL.appendingPathComponent("abc.txt")
+let tmpFile = documentsDirectoryURL.appendingPathComponent("abc.txt")
+
