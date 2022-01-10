@@ -44,3 +44,10 @@ print(appSupportContentString)
 print(documentsContentString)
 print(tmpContentString)
 
+// modify file
+let modifyTextString = "Hello, World"
+try? modifyTextString.write(to: appSupportFile, atomically: true, encoding: .utf8)
+try? modifyTextString.write(to: documentsFile, atomically: true, encoding: .utf8)
+try? modifyTextString.write(to: tmpFile, atomically: true, encoding: .utf8)
+
+
