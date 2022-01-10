@@ -33,4 +33,14 @@ try? textString.write(to: documentsFile, atomically: true, encoding: .utf8)
 try? textString.write(to: tmpFile, atomically: true, encoding: .utf8)
 // write는 NSString의 인스턴스 메서드
 
+// read file
+let appSupportContent = fileManager.contents(atPath: appSupportFile.path)!
+let documentsContent = fileManager.contents(atPath: documentsFile.path)!
+let tmpContent = fileManager.contents(atPath: tmpFile.path)!
+var appSupportContentString = String(data: appSupportContent, encoding: .utf8)!
+var documentsContentString = String(data: documentsContent, encoding: .utf8)!
+var tmpContentString = String(data: tmpContent, encoding: .utf8)!
+print(appSupportContentString)
+print(documentsContentString)
+print(tmpContentString)
 
