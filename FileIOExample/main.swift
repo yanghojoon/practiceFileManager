@@ -24,11 +24,11 @@ try? fileManager.createDirectory(at: tempDirectoryURL, withIntermediateDirectori
 // create file
 let appSupportFile = appSupportDirectoryURL.appendingPathComponent("abc.txt")
 let documentsFile = documentsDirectoryURL.appendingPathComponent("abc.txt")
-let tmpFile = documentsDirectoryURL.appendingPathComponent("abc.txt")
+let tmpFile = tempDirectoryURL.appendingPathComponent("abc.txt")
 
 // write file
 let textString = "Hello, Files"
-try? textString.write(to: appSupportURL, atomically: true, encoding: .utf8)
+try? textString.write(to: appSupportFile, atomically: true, encoding: .utf8)
 try? textString.write(to: documentsFile, atomically: true, encoding: .utf8)
 try? textString.write(to: tmpFile, atomically: true, encoding: .utf8)
 // write는 NSString의 인스턴스 메서드
